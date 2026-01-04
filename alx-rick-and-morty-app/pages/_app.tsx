@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { ApolloProvider } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client/react";
 import client from "@/graphql/apolloClient";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -8,5 +8,5 @@ export default function App({ Component, pageProps }: AppProps) {
     <ApolloProvider client={client}>
       <Component {...pageProps} />
     </ApolloProvider>
-  )
+  );
 }
